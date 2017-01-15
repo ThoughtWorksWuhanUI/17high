@@ -1,0 +1,8 @@
+{
+  "name": "17high",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ThoughtWorksWuhanUI/17high.git",
+  "author": "ThoughtWorksWuhan",
+  "license": "MIT"
+}
