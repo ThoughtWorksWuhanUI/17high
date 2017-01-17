@@ -2,9 +2,9 @@
 
 ### Setup 
 
-node -version v6.9.4
+node -version v6.9.4(use nvm)
 
-brew update
+brew update  
 brew install yarn
 
 yarn install
