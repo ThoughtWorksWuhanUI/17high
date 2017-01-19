@@ -1,6 +1,7 @@
 # 17high
 
 [![Build Status](https://travis-ci.org/ThoughtWorksWuhanUI/17high.svg?branch=master)](https://travis-ci.org/ThoughtWorksWuhanUI/17high)
+[![Coverage Status](https://coveralls.io/repos/github/ThoughtWorksWuhanUI/17high/badge.svg?branch=master)](https://coveralls.io/github/ThoughtWorksWuhanUI/17high?branch=master)
 
 ### Install 
 
