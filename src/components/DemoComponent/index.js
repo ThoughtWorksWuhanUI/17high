@@ -6,7 +6,7 @@ import css from './DemoComponent.scss';
 
 class DemoComponent extends React.Component {
 	render () {
-		return <p className={classNames('red')}>Hello React!</p>;
+		return <p className={classNames('transition')}></p>;
 	}
 }
 
