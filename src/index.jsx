@@ -1,11 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import css from './index.scss';
-
+import DemoComponent from './components/DemoComponent';
 
 class App extends React.Component {
 	render () {
-		return <p className='red'> Hello React!</p>;
+		return <DemoComponent/>;
 	}
 }
 
