@@ -8,3 +8,9 @@ brew update
 brew install yarn
 
 yarn install
+
+### Bundle with webpack
+npm run bundle
+
+### Run server with Browsersync
+npm run server
