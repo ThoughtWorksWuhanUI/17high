@@ -1,0 +1,4 @@
+exclude_paths:
+- task/*
+- gulpfile.js
+- webpack.config.js
