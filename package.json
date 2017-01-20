@@ -41,6 +41,7 @@
   },
   "jest": {
     "verbose": true,
+    "collectCoverage": true,
     "testPathDirs": [
       "src/components"
     ],
