@@ -39,7 +39,8 @@
   "scripts": {
     "bundle": "gulp bundle",
     "server": "gulp browser-sync",
-    "test": "jest && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls"
+    "test": "jest",
+    "ci-test": "jest && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls"
   },
   "jest": {
     "verbose": true,
