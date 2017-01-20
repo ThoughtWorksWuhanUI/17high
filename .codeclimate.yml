@@ -1,4 +1,8 @@
+engines:
+  eslint:
+    enabled: true
+ratings:
+  paths:
+  - src/**
 exclude_paths:
-- task/*
-- gulpfile.js
-- webpack.config.js
+- task/**
