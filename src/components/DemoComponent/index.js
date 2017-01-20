@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import classNames from 'classNames';
+import classNames from 'classnames';
 import styles from './DemoComponent.scss';
 
 
