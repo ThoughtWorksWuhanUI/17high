@@ -2,10 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import DemoComponent from './components/DemoComponent';
 
-class App extends React.Component {
-	render () {
-		return <DemoComponent/>;
-	}
-}
+const App = () => <DemoComponent />;
 
-render(<App/>, document.getElementById('app'));
+render(<App />, document.getElementById('app'));

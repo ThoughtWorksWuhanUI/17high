@@ -16,6 +16,11 @@
     "coveralls": "^2.11.15",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "gulp": "^3.9.1",
     "html-webpack-plugin": "^2.26.0",
@@ -40,7 +45,8 @@
     "bundle": "gulp bundle",
     "server": "gulp browser-sync",
     "test": "jest",
-    "ci-test": "jest && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls"
+    "ci-test": "jest && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
+    "lint": "eslint src/**/*.jsx"
   },
   "jest": {
     "verbose": true,
