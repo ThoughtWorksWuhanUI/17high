@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 import DemoComponent from '../index';
 
 jest.dontMock('../index');
 
-describe("A suite", function () {
-	it("contains spec with an expectation", function () {
-		expect(shallow(<DemoComponent />).contains(<p className="transition"></p>)).toBe(true);
-	});
+describe('A suite', () => {
+  it('contains spec with an expectation', () => {
+    expect(shallow(<DemoComponent />).contains(<p className="transition">Hi</p>)).toBe(true);
+  });
 });
