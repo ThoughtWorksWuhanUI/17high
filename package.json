@@ -42,6 +42,7 @@
     "react-dom": "^15.4.2"
   },
   "scripts": {
+    "start": "gulp bundle && gulp browser-sync",
     "bundle": "gulp bundle",
     "server": "gulp browser-sync",
     "test": "jest",
