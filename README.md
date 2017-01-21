@@ -5,17 +5,20 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/thoughtworkswuhanui/17high/badge.svg)](https://snyk.io/test/github/thoughtworkswuhanui/17high)
 [![Code Climate](https://codeclimate.com/github/ThoughtWorksWuhanUI/17high/badges/gpa.svg)](https://codeclimate.com/github/ThoughtWorksWuhanUI/17high)
 
-### Install 
+### Install
 
 node -version v6.9.4(run 'nvm use', install it if not exist)
 
-brew update  
+brew update
 brew install yarn
 
 yarn install
 
 ### Bundle with webpack
-npm run bundle
+yarn bundle
 
 ### Run server with Browsersync
-npm run server
+yarn server
+
+### Run eslint
+yarn lint
