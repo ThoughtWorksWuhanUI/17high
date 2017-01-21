@@ -31,6 +31,7 @@
     "postcss-loader": "^1.2.2",
     "precss": "^1.4.0",
     "react-addons-test-utils": "^15.4.2",
+    "sass-lint": "^1.10.2",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
@@ -47,7 +48,9 @@
     "server": "gulp browser-sync",
     "test": "jest --coverage",
     "ci-test": "jest --coverage && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
-    "lint": "eslint src/**/*.jsx"
+    "eslint": "eslint src/**/*.jsx",
+    "csslint": "sass-lint",
+    "lint": "yarn eslint && yarn csslint"
   },
   "jest": {
     "verbose": true,
