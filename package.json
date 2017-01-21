@@ -45,13 +45,12 @@
     "start": "gulp bundle && gulp browser-sync",
     "bundle": "gulp bundle",
     "server": "gulp browser-sync",
-    "test": "jest",
-    "ci-test": "jest && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
+    "test": "jest --coverage",
+    "ci-test": "jest --coverage && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "lint": "eslint src/**/*.jsx"
   },
   "jest": {
     "verbose": true,
-    "collectCoverage": true,
     "testPathDirs": [
       "src/components"
     ],
