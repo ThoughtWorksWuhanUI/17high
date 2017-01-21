@@ -22,3 +22,5 @@ yarn server
 
 ### Run eslint
 yarn lint
+
+For more information, please refer to our [wiki](https://github.com/ThoughtWorksWuhanUI/17high/wiki).
