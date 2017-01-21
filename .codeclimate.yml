@@ -1,8 +1,11 @@
 engines:
   eslint:
     enabled: true
+  scss-lint:
+    enabled: true
 ratings:
   paths:
   - src/**
 exclude_paths:
 - task/**
+- node_modules/**
