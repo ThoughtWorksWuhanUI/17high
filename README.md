@@ -21,6 +21,15 @@ yarn bundle
 yarn server
 
 ### Run eslint
+yarn eslint
+
+### Run sass lint
+yarn csslint
+
+### Run eslint && sass lint
 yarn lint
+
+### Run Jest test
+yarn test
 
 For more information, please refer to our [wiki](https://github.com/ThoughtWorksWuhanUI/17high/wiki).
