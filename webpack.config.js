@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
@@ -30,6 +31,9 @@ const config = {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
+    new CleanWebpackPlugin([`${BUILD_DIR}`], {
+      verbose: true,
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: false,
