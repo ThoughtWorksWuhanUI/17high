@@ -32,6 +32,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      inject: false,
     }),
     extractCSS,
   ],
