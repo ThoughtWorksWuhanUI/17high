@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
 
-const extractCSS = new ExtractTextPlugin(`${BUILD_DIR}/styles.css`);
+const extractCSS = new ExtractTextPlugin('styles.css');
 
 const config = {
   entry: `${APP_DIR}/index.jsx`,
