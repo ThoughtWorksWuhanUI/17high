@@ -7,5 +7,4 @@ ratings:
   paths:
   - src/**
 exclude_paths:
-- task/**
 - node_modules/**
