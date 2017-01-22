@@ -1,8 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 import { transition } from './DemoComponent.scss';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const DemoComponent = () =>
-  <p className={classNames(transition)}>Hi</p>;
+  <RaisedButton label="test5" />;
 
 export default DemoComponent;
