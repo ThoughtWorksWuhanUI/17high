@@ -12,7 +12,6 @@
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
-    "browser-sync": "^2.18.6",
     "coveralls": "^2.11.15",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.0",
@@ -22,7 +21,6 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "gulp": "^3.9.1",
     "html-webpack-plugin": "^2.26.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^18.1.0",
@@ -35,6 +33,7 @@
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
@@ -44,9 +43,9 @@
     "material-ui": "0.16.7"
   },
   "scripts": {
-    "start": "gulp bundle && gulp browser-sync",
-    "bundle": "gulp bundle",
-    "server": "gulp browser-sync",
+    "start": "webpack && webpack-dev-server",
+    "bundle": "webpack",
+    "server": "webpack-dev-server",
     "test": "jest --coverage",
     "ci-test": "jest --coverage && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "eslint": "eslint src/**/*.jsx",
