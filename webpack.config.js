@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
@@ -8,7 +9,11 @@ const APP_DIR = path.resolve(__dirname, 'src');
 const extractCSS = new ExtractTextPlugin('styles.css');
 
 const config = {
-  entry: `${APP_DIR}/index.jsx`,
+  entry: {
+    app: [
+      `${APP_DIR}/index.jsx`
+    ]
+  },
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
@@ -18,7 +23,7 @@ const config = {
       {
         test: /\.jsx?/,
         include: APP_DIR,
-        loader: 'babel',
+        loaders: ['babel'],
       },
       {
         test: /\.scss$/,
@@ -30,6 +35,7 @@ const config = {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: false,
