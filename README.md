@@ -5,7 +5,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/thoughtworkswuhanui/17high/badge.svg)](https://snyk.io/test/github/thoughtworkswuhanui/17high)
 [![Code Climate](https://codeclimate.com/github/ThoughtWorksWuhanUI/17high/badges/gpa.svg)](https://codeclimate.com/github/ThoughtWorksWuhanUI/17high)
 
-### Install
+## Install
 
 node -version v6.9.4(run 'nvm use', install it if not exist)
 
@@ -15,22 +15,13 @@ brew install yarn
 
 yarn install
 
-### Bundle with webpack
-yarn bundle
+## Scripts
 
-### Run server with Browsersync
-yarn server
-
-### Run eslint
-yarn eslint
-
-### Run sass lint
-yarn csslint
-
-### Run eslint && sass lint
-yarn lint
-
-### Run Jest test
-yarn test
+- `yarn bundle` bundle with webpack
+- `yarn server` run server
+- `yarn eslint` run eslint
+- `yarn csslint` run scss lint
+- `yarn lint` run eslint and scss lint
+- `yarn test` run Jest test
 
 For more information, please refer to our [wiki](https://github.com/ThoughtWorksWuhanUI/17high/wiki).
