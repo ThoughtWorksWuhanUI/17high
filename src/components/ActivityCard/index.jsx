@@ -1,24 +1,42 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router';
-import { localMoment, smartMoment } from '../../utils/moment';
-import { container, image, information, date } from './ActivityCard.scss';
+import { smartMoment } from '../../utils/moment';
+import styles, { container, image, information, enrollment } from './ActivityCard.scss';
 
-const ActivityCard = activity => (
+const ActivityCard = ({ id, title, imageUrl, location, date, sponsor, customers }) => (
   <li className={classNames(container)}>
-    <Link to={`/activity/${activity.id}`}>
+    <Link to={`/activity/${id}`}>
       <div className={classNames(image)}>
-        <img src={activity.imageUrl} alt={`${activity.title}`}/>
+        <img src={imageUrl} alt={`${title}`} />
       </div>
       <div className={classNames(information)}>
-        <h3>{ activity.title }</h3>
-        <div className={classNames(date)}>
-          {localMoment('20170202', 'YYYYMMDD').fromNow()}
-          {smartMoment('20170202', 'YYYYMMDD')}
+        <h3>{ title }</h3>
+        <div className={classNames(styles.date)}>
+          {smartMoment(date, 'YYYY-MM-DD HH:mm:ss')}
+        </div>
+        <div className={classNames(styles.location)}>
+          {location}
+        </div>
+        <div className={classNames(styles.sponsor)}>
+          {sponsor}
+        </div>
+        <div className={classNames(enrollment)}>
+          {customers.length}
         </div>
       </div>
     </Link>
   </li>
 );
+
+ActivityCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  sponsor: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  customers: PropTypes.arrayOf(React.PropTypes.number).isRequired,
+};
 
 export default ActivityCard;
