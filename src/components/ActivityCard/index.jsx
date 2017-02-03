@@ -1,29 +1,20 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 import { Link } from 'react-router';
 import { smartMoment } from '../../utils/moment';
-import styles, { container, image, information, enrollment } from './ActivityCard.scss';
+import styles, { container, image, description, enrollment } from './ActivityCard.scss';
 
 const ActivityCard = ({ id, title, imageUrl, location, date, sponsor, customers }) => (
-  <li className={classNames(container)}>
+  <li key={id} className={container}>
     <Link to={`/activity/${id}`}>
-      <div className={classNames(image)}>
+      <div className={image}>
         <img src={imageUrl} alt={`${title}`} />
       </div>
-      <div className={classNames(information)}>
+      <div className={description}>
         <h3>{ title }</h3>
-        <div className={classNames(styles.date)}>
-          {smartMoment(date, 'YYYY-MM-DD HH:mm:ss')}
-        </div>
-        <div className={classNames(styles.location)}>
-          {location}
-        </div>
-        <div className={classNames(styles.sponsor)}>
-          {sponsor}
-        </div>
-        <div className={classNames(enrollment)}>
-          {customers.length}
-        </div>
+        <div className={styles.date}>{`时间: ${smartMoment(date, 'YYYY-MM-DD HH:mm:ss')}`}</div>
+        <div className={styles.location}>{`地点: ${location}`}</div>
+        <div className={styles.sponsor}>{`发起: ${sponsor}`}</div>
+        <div className={enrollment}>{`参加人数: ${customers.length}`}</div>
       </div>
     </Link>
   </li>
