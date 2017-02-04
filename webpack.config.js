@@ -5,13 +5,16 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'src');
 
-const extractCSS = new ExtractTextPlugin('styles.css');
+const extractCSS = new ExtractTextPlugin('[name].min.css');
 
 const config = {
-  entry: `${APP_DIR}/index.jsx`,
+  entry: {
+    high: `${APP_DIR}/index.jsx`,
+    vendor: `${APP_DIR}/vendor/index.jsx`,
+  },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
   },
   module: {
     loaders: [

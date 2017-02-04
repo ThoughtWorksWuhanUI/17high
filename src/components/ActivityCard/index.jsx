@@ -4,7 +4,7 @@ import { smartMoment } from '../../utils/moment';
 import styles, { container, image, description, enrollment } from './ActivityCard.scss';
 
 const ActivityCard = ({ id, title, imageUrl, location, date, sponsor, customers }) => (
-  <li key={id} className={container}>
+  <li key={id} className="box">
     <Link to={`/activity/${id}`}>
       <div className={image}>
         <img src={imageUrl} alt={`${title}`} />
