@@ -12,6 +12,12 @@ const activity = {
   customers: [1, 2],
 };
 
-const App = () => <ActivityCard {... activity} />;
+const App = () => (
+  <div className="container">
+    <div className="columns">
+      <ActivityCard {... activity} />
+    </div>
+  </div>
+);
 
 render(<App />, document.getElementById('app'));

@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import classNames from 'classnames';
 import { smartMoment } from '../../utils/moment';
 import styles, { container, image, description, enrollment } from './ActivityCard.scss';
 
-const ActivityCard = ({ id, title, imageUrl, location, date, sponsor, customers }) => (
-  <li key={id} className="box">
+const ActivityCard = ({id, title, imageUrl, location, date, sponsor, customers}) => (
+  <article className={classNames('column is-three-quarters', container)}>
     <Link to={`/activity/${id}`}>
       <div className={image}>
         <img src={imageUrl} alt={`${title}`} />
@@ -17,7 +18,7 @@ const ActivityCard = ({ id, title, imageUrl, location, date, sponsor, customers 
         <div className={enrollment}>{`参加人数: ${customers.length}`}</div>
       </div>
     </Link>
-  </li>
+  </article>
 );
 
 ActivityCard.propTypes = {
