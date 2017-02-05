@@ -58,7 +58,7 @@
   "jest": {
     "verbose": true,
     "testPathDirs": [
-      "src/components"
+      "src/components","src/utils"
     ],
     "unmockedModulePathPatterns": [
       "node_modules/react/",

@@ -18,8 +18,10 @@ const ActivityCard = ({ id, title, imageUrl, location, startDate, endDate, spons
         <div className={styles.sponsor}>{`发起: ${sponsor}`}</div>
         <div className={enrollment}>{`${customers.length}人参与`}</div>
         <div className={join}>
-          <Link to={`/activity/${id}`} className="button is-primary">详情</Link>
-          <button className="button is-danger is-pulled-right" onClick={() => onClickJoin(id)}>立即加入</button>
+          <Link to={`/activity/${id}`} className="button is-primary" activeStyle={{ color: 'red' }}>详情</Link>
+          <button className="button is-danger is-pulled-right" onClick={() => onClickJoin(id)}>
+            立即加入
+          </button>
         </div>
       </div>
     </article>
