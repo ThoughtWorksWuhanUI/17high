@@ -25,7 +25,13 @@ const config = {
       },
       {
         test: /\.scss$/,
+        include: `${APP_DIR}/components`,
         loader: extractCSS.extract(['css?minimize&modules&importLoaders=2&localIdentName=[name]__[local]', 'postcss', 'sass']),
+      },
+      {
+        test: /\.scss$/,
+        include: `${APP_DIR}/vendor`,
+        loader: extractCSS.extract(['css?minimize', 'sass']),
       },
     ],
   },
