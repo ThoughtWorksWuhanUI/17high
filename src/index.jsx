@@ -6,9 +6,11 @@ const activity = {
   id: 1,
   title: '看电影',
   location: '武汉办公室',
-  date: '2017-12-31 13:59:59',
+  startDate: '2017-12-31 13:59:59',
+  endDate: '2017-12-31 13:59:59',
   sponsor: 'ThoughtWorks',
   customers: [1, 2],
+  onClickJoin: (id) => { console.log(id); },
 };
 
 const App = () => (
