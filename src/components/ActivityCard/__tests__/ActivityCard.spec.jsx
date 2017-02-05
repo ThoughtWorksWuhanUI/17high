@@ -22,8 +22,17 @@ describe('Activity Card', () => {
     activityCard = shallow(<ActivityCard {... activity} />);
   });
 
-  it('should render properly', () => {
-    expect(activityCard.contains(<div className="media-left image"><img src="http://placehold.it/150x200" alt="看电影"/></div>)).toBe(true);
+  it('should render date range', () => {
+    expect(activityCard.contains(<div className="date">时间: 2017-12-31(星期日) 下午 1:59:59 ~ 2017-12-31(星期日) 下午 1:59:59</div>)).toBe(true);
+  });
+
+  it('should render relative date', () => {
+    const oldDateActivity = Object.assign(activity, {
+      startDate: '2015-12-31 13:59:59',
+      endDate: '2015-12-31 13:59:59',
+    });
+    activityCard = shallow(<ActivityCard {... oldDateActivity} />);
+    expect(activityCard.contains(<div className="date">时间: 1 年前</div>)).toBe(true);
   });
 
   it('should call onClickJoin', () => {
