@@ -19,7 +19,7 @@ const ActivityCard = ({ id, title, imageUrl, location, startDate, endDate, spons
       <div className={classNames('media-left', image)}>
         <img src={imageUrl} alt={`${title}`} />
       </div>
-      <div className={classNames('media-right', description)}>
+      <div className={classNames('media-content', description)}>
         <h3 className={styles.title}>{ title }</h3>
         <div className={styles.date}>{`时间: ${renderDate(startDate, endDate)}`}</div>
         <div className={styles.location}>{`地点: ${location}`}</div>
@@ -49,7 +49,7 @@ ActivityCard.propTypes = {
 };
 
 ActivityCard.defaultProps = {
-  imageUrl: 'http://placehold.it/150x200',
+  imageUrl: 'http://placehold.it/140x180',
 };
 
 export default ActivityCard;
