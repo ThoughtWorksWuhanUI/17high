@@ -16,10 +16,7 @@ const activity = {
 const App = () => (
   <div className="container">
     <div className="columns">
-      <div className="column is-7 is-vertical">
-        <ActivityCard {... activity} />
-        <ActivityCard {... activity} />
-        <ActivityCard {... activity} />
+      <div className="column is-7">
         <ActivityCard {... activity} />
       </div>
     </div>
