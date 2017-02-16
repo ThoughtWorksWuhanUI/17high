@@ -7,10 +7,12 @@ import styles, { date, container, enrollment, join } from './ActivityCard.scss';
 
 
 const renderDate = (startDate, endDate) => {
-  if (moment(endDate, 'YYYY-MM-DD HH:mm:ss').isBefore(moment())) {
-    return smartMoment(startDate, 'YYYY-MM-DD HH:mm:ss');
+  const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
+
+  if (moment(endDate, DATE_FORMAT).isBefore(moment())) {
+    return smartMoment(startDate, DATE_FORMAT);
   }
-  return `${smartMoment(startDate, 'YYYY-MM-DD HH:mm:ss')} ~ ${smartMoment(endDate, 'YYYY-MM-DD HH:mm:ss')}`;
+  return `${smartMoment(startDate, DATE_FORMAT)} ~ ${smartMoment(endDate, DATE_FORMAT)}`;
 };
 
 const ActivityCard = ({ id, title, imageUrl, location, startDate, endDate, sponsor, customers, onClickJoin }) => (
